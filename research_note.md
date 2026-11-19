@@ -42,4 +42,4 @@ The 20 random edits had mean Swedish NLL `0.534` and English NLL `0.342`; these 
 1. Takehi, R., Teoh, J., Zhang, A., & Khattab, O. (2026). *Sparks of Weight-Space Programming*. https://rikiyat.github.io/blog/weight-space-programming/
 2. WASP. *SE.LLMA – Swedish large language models*. https://wasp-sweden.org/research/projects/sellma/
 
-**AI usage:** I used ChatGPT to help refine the experiment design, write and run the code, interpret the results, and draft the research note. All reported measurements come from the experiment code included in this repository.
+**AI usage:** I used ChatGPT to help write and run the experiment code and draft parts of the research note. It also provided input on the experiment design and interpretation of results. All reported measurements come from the included code.

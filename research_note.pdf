@@ -19,7 +19,7 @@ endobj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 7 0 R >>
 endobj
 7 0 obj
-<< /Length 6215 >>
+<< /Length 7037 >>
 stream
 0.14 0.22 0.31 rg
 BT /F2 16 Tf 1 0 0 1 48 754.0 Tm (Does a sparse weight edit improve Swedish character) Tj ET
@@ -58,11 +58,41 @@ BT /F1 8.8 Tf 1 0 0 1 48 285.1 Tm (limiting validation English overall NLL degra
 BT /F1 8.8 Tf 1 0 0 1 48 272.9 Tm (0.02. Controls: unchanged model, 20 random three-character output-bias edits of the same amplitude, and) Tj ET
 BT /F1 8.8 Tf 1 0 0 1 48 260.7 Tm (a fixed inference-time logit offset. Test remained untouched during selection.) Tj ET
 BT /F2 11.3 Tf 1 0 0 1 48 242.5 Tm (Held-out results \(lower NLL is better\)) Tj ET
-BT /F3 7.9 Tf 1 0 0 1 48 222.0 Tm (Metric | Baseline | Targeted edit | Interpretation) Tj ET
-BT /F3 7.9 Tf 1 0 0 1 48 208.8 Tm (Swedish accented-target NLL | 0.580 | 0.313 | Better at \345/\344/\366 targets) Tj ET
-BT /F3 7.9 Tf 1 0 0 1 48 195.6 Tm (Swedish accented-target top-1 accuracy | 83.2% | 91.2% | +8.0 percentage points) Tj ET
-BT /F3 7.9 Tf 1 0 0 1 48 182.4 Tm (Swedish all-character NLL | 0.488 | 0.509 | Regression) Tj ET
-BT /F3 7.9 Tf 1 0 0 1 48 169.2 Tm (English all-character NLL | 0.316 | 0.324 | Small regression) Tj ET
+q
+0.88 0.92 0.95 rg
+48 214 518 18 re f
+0.975 0.985 0.99 rg
+48 189 518 12 re f
+48 165 518 12 re f
+0.78 0.82 0.85 RG
+0.45 w
+48 214 m 566 214 l S
+48 201 m 566 201 l S
+48 189 m 566 189 l S
+48 177 m 566 177 l S
+48 165 m 566 165 l S
+0.11 0.20 0.27 rg
+BT /F2 7.8 Tf 1 0 0 1 55 224 Tm (Metric) Tj ET
+BT /F2 7.8 Tf 1 0 0 1 293 224 Tm (Baseline) Tj ET
+BT /F2 7.8 Tf 1 0 0 1 370 224 Tm (Targeted edit) Tj ET
+BT /F2 7.8 Tf 1 0 0 1 457 224 Tm (Interpretation) Tj ET
+BT /F1 7.6 Tf 1 0 0 1 55 205 Tm (Swedish accented-target NLL) Tj ET
+BT /F1 7.6 Tf 1 0 0 1 293 205 Tm (0.580) Tj ET
+BT /F1 7.6 Tf 1 0 0 1 370 205 Tm (0.313) Tj ET
+BT /F1 7.6 Tf 1 0 0 1 457 205 Tm (Better at \345/\344/\366 targets) Tj ET
+BT /F1 7.6 Tf 1 0 0 1 55 193 Tm (Swedish accented-target top-1 accuracy) Tj ET
+BT /F1 7.6 Tf 1 0 0 1 293 193 Tm (83.2%) Tj ET
+BT /F1 7.6 Tf 1 0 0 1 370 193 Tm (91.2%) Tj ET
+BT /F1 7.6 Tf 1 0 0 1 457 193 Tm (+8.0 percentage points) Tj ET
+BT /F1 7.6 Tf 1 0 0 1 55 181 Tm (Swedish all-character NLL) Tj ET
+BT /F1 7.6 Tf 1 0 0 1 293 181 Tm (0.488) Tj ET
+BT /F1 7.6 Tf 1 0 0 1 370 181 Tm (0.509) Tj ET
+BT /F1 7.6 Tf 1 0 0 1 457 181 Tm (Regression) Tj ET
+BT /F1 7.6 Tf 1 0 0 1 55 169 Tm (English all-character NLL) Tj ET
+BT /F1 7.6 Tf 1 0 0 1 293 169 Tm (0.316) Tj ET
+BT /F1 7.6 Tf 1 0 0 1 370 169 Tm (0.324) Tj ET
+BT /F1 7.6 Tf 1 0 0 1 457 169 Tm (Small regression) Tj ET
+Q
 BT /F1 8.8 Tf 1 0 0 1 48 156.0 Tm (The 20 random edits had mean Swedish NLL 0.534 and English NLL 0.342; these random controls have) Tj ET
 BT /F1 8.8 Tf 1 0 0 1 48 143.8 Tm (different target characters and are not a matched comparator for accent-specific improvement. The edit) Tj ET
 BT /F1 8.8 Tf 1 0 0 1 48 131.6 Tm (changed model outputs: for the held-out prefix ^barnet ser ett , expected \344, baseline predicted g, and) Tj ET
@@ -120,10 +150,10 @@ xref
 0000000334 00000 n 
 0000000429 00000 n 
 0000000575 00000 n 
-0000006841 00000 n 
-0000006987 00000 n 
+0000007663 00000 n 
+0000007809 00000 n 
 trailer
 << /Size 10 /Root 1 0 R >>
 startxref
-9877
+10699
 %%EOF

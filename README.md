@@ -32,7 +32,7 @@ The datasets are **synthetic sentence templates**, not natural Swedish. All eval
 
 ## AI usage
 
-I used ChatGPT to help refine the experiment design, write and run the code, interpret the results, and draft the research note. All reported measurements come from the experiment code included in this repository.
+I used ChatGPT to help write and run the experiment code and draft parts of the research note. It also provided input on the experiment design and interpretation of results. All reported measurements come from the included code.
 
 ## Scope and submission
 

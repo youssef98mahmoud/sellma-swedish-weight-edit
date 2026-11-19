@@ -1,0 +1,529 @@
+{
+  "experiment": "Targeted output bias edit in small synthetic bilingual char GRU",
+  "seed": 20261119,
+  "torch": "2.10.0+cpu",
+  "python": "3.13.5",
+  "architecture": "24-dimensional char embedding, single-layer GRU hidden=48, linear output bias",
+  "train_counts": {
+    "sv": 800,
+    "en": 3200
+  },
+  "validation_counts": {
+    "sv": 240,
+    "en": 240
+  },
+  "test_counts": {
+    "sv": 400,
+    "en": 400
+  },
+  "data_disclosure": "Manually authored synthetic vocabulary/templates, random recombinations. Vocabulary/templates overlap between splits; not natural Swedish or generalization to novel lexical items.",
+  "edit_description": "Add a constant to the three output bias entries for Swedish å ä ö.",
+  "selected_delta": 1.6,
+  "selection_rule": "Minimize Swedish accented-token validation NLL; max +0.03 English validation overall NLL; max +0.02 Swedish validation overall NLL. Grid 0..2.5 step 0.1.",
+  "validation_baseline": {
+    "sv": {
+      "nll": 0.48793,
+      "accent_nll": 0.65079,
+      "accent_accuracy": 0.7931,
+      "accent_count": 812,
+      "token_count": 8009
+    },
+    "en": {
+      "nll": 0.31402,
+      "accent_nll": null,
+      "accent_accuracy": null,
+      "accent_count": 0,
+      "token_count": 8476
+    }
+  },
+  "validation_selected": {
+    "sv": {
+      "nll": 0.50504,
+      "accent_nll": 0.35097,
+      "accent_accuracy": 0.8867,
+      "accent_count": 812,
+      "token_count": 8009
+    },
+    "en": {
+      "nll": 0.32185,
+      "accent_nll": null,
+      "accent_accuracy": null,
+      "accent_count": 0,
+      "token_count": 8476
+    }
+  },
+  "test": {
+    "baseline": {
+      "sv": {
+        "nll": 0.48751,
+        "accent_nll": 0.57998,
+        "accent_accuracy": 0.83213,
+        "accent_count": 1382,
+        "token_count": 13405
+      },
+      "en": {
+        "nll": 0.31598,
+        "accent_nll": null,
+        "accent_accuracy": null,
+        "accent_count": 0,
+        "token_count": 14062
+      }
+    },
+    "targeted_weight_edit": {
+      "sv": {
+        "nll": 0.50855,
+        "accent_nll": 0.31283,
+        "accent_accuracy": 0.91245,
+        "accent_count": 1382,
+        "token_count": 13405
+      },
+      "en": {
+        "nll": 0.32379,
+        "accent_nll": null,
+        "accent_accuracy": null,
+        "accent_count": 0,
+        "token_count": 14062
+      }
+    },
+    "inference_logit_bias": {
+      "sv": {
+        "nll": 0.50855,
+        "accent_nll": 0.31283,
+        "accent_accuracy": 0.91245,
+        "accent_count": 1382,
+        "token_count": 13405
+      },
+      "en": {
+        "nll": 0.32379,
+        "accent_nll": null,
+        "accent_accuracy": null,
+        "accent_count": 0,
+        "token_count": 14062
+      }
+    }
+  },
+  "max_forward_logit_difference_edit_vs_logit_bias": 4.76837158203125e-7,
+  "random_controls": [
+    {
+      "characters": [
+        "y",
+        "n",
+        "v"
+      ],
+      "sv": {
+        "nll": 0.53847,
+        "accent_nll": 0.67216,
+        "accent_accuracy": 0.75904,
+        "accent_count": 1382,
+        "token_count": 13405
+      },
+      "en": {
+        "nll": 0.33443,
+        "accent_nll": null,
+        "accent_accuracy": null,
+        "accent_count": 0,
+        "token_count": 14062
+      }
+    },
+    {
+      "characters": [
+        "o",
+        "v",
+        "x"
+      ],
+      "sv": {
+        "nll": 0.52495,
+        "accent_nll": 0.7051,
+        "accent_accuracy": 0.7576,
+        "accent_count": 1382,
+        "token_count": 13405
+      },
+      "en": {
+        "nll": 0.34388,
+        "accent_nll": null,
+        "accent_accuracy": null,
+        "accent_count": 0,
+        "token_count": 14062
+      }
+    },
+    {
+      "characters": [
+        "s",
+        "e",
+        " "
+      ],
+      "sv": {
+        "nll": 0.55245,
+        "accent_nll": 0.7135,
+        "accent_accuracy": 0.77858,
+        "accent_count": 1382,
+        "token_count": 13405
+      },
+      "en": {
+        "nll": 0.34118,
+        "accent_nll": null,
+        "accent_accuracy": null,
+        "accent_count": 0,
+        "token_count": 14062
+      }
+    },
+    {
+      "characters": [
+        "g",
+        "r",
+        "v"
+      ],
+      "sv": {
+        "nll": 0.52918,
+        "accent_nll": 0.72144,
+        "accent_accuracy": 0.75398,
+        "accent_count": 1382,
+        "token_count": 13405
+      },
+      "en": {
+        "nll": 0.34686,
+        "accent_nll": null,
+        "accent_accuracy": null,
+        "accent_count": 0,
+        "token_count": 14062
+      }
+    },
+    {
+      "characters": [
+        "m",
+        "j",
+        "."
+      ],
+      "sv": {
+        "nll": 0.50693,
+        "accent_nll": 0.61163,
+        "accent_accuracy": 0.83213,
+        "accent_count": 1382,
+        "token_count": 13405
+      },
+      "en": {
+        "nll": 0.32101,
+        "accent_nll": null,
+        "accent_accuracy": null,
+        "accent_count": 0,
+        "token_count": 14062
+      }
+    },
+    {
+      "characters": [
+        "g",
+        "s",
+        "."
+      ],
+      "sv": {
+        "nll": 0.54049,
+        "accent_nll": 0.64011,
+        "accent_accuracy": 0.80318,
+        "accent_count": 1382,
+        "token_count": 13405
+      },
+      "en": {
+        "nll": 0.33854,
+        "accent_nll": null,
+        "accent_accuracy": null,
+        "accent_count": 0,
+        "token_count": 14062
+      }
+    },
+    {
+      "characters": [
+        "u",
+        "d",
+        "w"
+      ],
+      "sv": {
+        "nll": 0.51902,
+        "accent_nll": 0.61374,
+        "accent_accuracy": 0.83068,
+        "accent_count": 1382,
+        "token_count": 13405
+      },
+      "en": {
+        "nll": 0.34194,
+        "accent_nll": null,
+        "accent_accuracy": null,
+        "accent_count": 0,
+        "token_count": 14062
+      }
+    },
+    {
+      "characters": [
+        "h",
+        " ",
+        "s"
+      ],
+      "sv": {
+        "nll": 0.54128,
+        "accent_nll": 0.62349,
+        "accent_accuracy": 0.82923,
+        "accent_count": 1382,
+        "token_count": 13405
+      },
+      "en": {
+        "nll": 0.34694,
+        "accent_nll": null,
+        "accent_accuracy": null,
+        "accent_count": 0,
+        "token_count": 14062
+      }
+    },
+    {
+      "characters": [
+        "n",
+        "o",
+        "i"
+      ],
+      "sv": {
+        "nll": 0.56373,
+        "accent_nll": 0.7277,
+        "accent_accuracy": 0.78365,
+        "accent_count": 1382,
+        "token_count": 13405
+      },
+      "en": {
+        "nll": 0.34743,
+        "accent_nll": null,
+        "accent_accuracy": null,
+        "accent_count": 0,
+        "token_count": 14062
+      }
+    },
+    {
+      "characters": [
+        "h",
+        "y",
+        "p"
+      ],
+      "sv": {
+        "nll": 0.52625,
+        "accent_nll": 0.63719,
+        "accent_accuracy": 0.80391,
+        "accent_count": 1382,
+        "token_count": 13405
+      },
+      "en": {
+        "nll": 0.34802,
+        "accent_nll": null,
+        "accent_accuracy": null,
+        "accent_count": 0,
+        "token_count": 14062
+      }
+    },
+    {
+      "characters": [
+        "p",
+        "e",
+        "."
+      ],
+      "sv": {
+        "nll": 0.54355,
+        "accent_nll": 0.70521,
+        "accent_accuracy": 0.77858,
+        "accent_count": 1382,
+        "token_count": 13405
+      },
+      "en": {
+        "nll": 0.33394,
+        "accent_nll": null,
+        "accent_accuracy": null,
+        "accent_count": 0,
+        "token_count": 14062
+      }
+    },
+    {
+      "characters": [
+        " ",
+        "f",
+        "n"
+      ],
+      "sv": {
+        "nll": 0.54015,
+        "accent_nll": 0.61148,
+        "accent_accuracy": 0.83213,
+        "accent_count": 1382,
+        "token_count": 13405
+      },
+      "en": {
+        "nll": 0.34045,
+        "accent_nll": null,
+        "accent_accuracy": null,
+        "accent_count": 0,
+        "token_count": 14062
+      }
+    },
+    {
+      "characters": [
+        ".",
+        "d",
+        "i"
+      ],
+      "sv": {
+        "nll": 0.5307,
+        "accent_nll": 0.64096,
+        "accent_accuracy": 0.8097,
+        "accent_count": 1382,
+        "token_count": 13405
+      },
+      "en": {
+        "nll": 0.3439,
+        "accent_nll": null,
+        "accent_accuracy": null,
+        "accent_count": 0,
+        "token_count": 14062
+      }
+    },
+    {
+      "characters": [
+        "k",
+        " ",
+        "v"
+      ],
+      "sv": {
+        "nll": 0.53053,
+        "accent_nll": 0.68284,
+        "accent_accuracy": 0.77786,
+        "accent_count": 1382,
+        "token_count": 13405
+      },
+      "en": {
+        "nll": 0.33816,
+        "accent_nll": null,
+        "accent_accuracy": null,
+        "accent_count": 0,
+        "token_count": 14062
+      }
+    },
+    {
+      "characters": [
+        "y",
+        ".",
+        "c"
+      ],
+      "sv": {
+        "nll": 0.50983,
+        "accent_nll": 0.60652,
+        "accent_accuracy": 0.8068,
+        "accent_count": 1382,
+        "token_count": 13405
+      },
+      "en": {
+        "nll": 0.33642,
+        "accent_nll": null,
+        "accent_accuracy": null,
+        "accent_count": 0,
+        "token_count": 14062
+      }
+    },
+    {
+      "characters": [
+        "p",
+        "i",
+        "e"
+      ],
+      "sv": {
+        "nll": 0.55207,
+        "accent_nll": 0.75231,
+        "accent_accuracy": 0.77786,
+        "accent_count": 1382,
+        "token_count": 13405
+      },
+      "en": {
+        "nll": 0.34983,
+        "accent_nll": null,
+        "accent_accuracy": null,
+        "accent_count": 0,
+        "token_count": 14062
+      }
+    },
+    {
+      "characters": [
+        "e",
+        "r",
+        "g"
+      ],
+      "sv": {
+        "nll": 0.54552,
+        "accent_nll": 0.79427,
+        "accent_accuracy": 0.72214,
+        "accent_count": 1382,
+        "token_count": 13405
+      },
+      "en": {
+        "nll": 0.34773,
+        "accent_nll": null,
+        "accent_accuracy": null,
+        "accent_count": 0,
+        "token_count": 14062
+      }
+    },
+    {
+      "characters": [
+        "a",
+        "l",
+        "y"
+      ],
+      "sv": {
+        "nll": 0.53323,
+        "accent_nll": 0.6972,
+        "accent_accuracy": 0.78509,
+        "accent_count": 1382,
+        "token_count": 13405
+      },
+      "en": {
+        "nll": 0.3387,
+        "accent_nll": null,
+        "accent_accuracy": null,
+        "accent_count": 0,
+        "token_count": 14062
+      }
+    },
+    {
+      "characters": [
+        "m",
+        "s",
+        "f"
+      ],
+      "sv": {
+        "nll": 0.53348,
+        "accent_nll": 0.6124,
+        "accent_accuracy": 0.83213,
+        "accent_count": 1382,
+        "token_count": 13405
+      },
+      "en": {
+        "nll": 0.34598,
+        "accent_nll": null,
+        "accent_accuracy": null,
+        "accent_count": 0,
+        "token_count": 14062
+      }
+    },
+    {
+      "characters": [
+        "o",
+        "h",
+        "."
+      ],
+      "sv": {
+        "nll": 0.52594,
+        "accent_nll": 0.68726,
+        "accent_accuracy": 0.78075,
+        "accent_count": 1382,
+        "token_count": 13405
+      },
+      "en": {
+        "nll": 0.35026,
+        "accent_nll": null,
+        "accent_accuracy": null,
+        "accent_count": 0,
+        "token_count": 14062
+      }
+    }
+  ],
+  "notes": "No pretrained model, no natural text, and no semantic quality test. Evaluation uses teacher-forced next-character prediction. An output-bias edit is analytically identical to a constant inference-time logit offset."
+}

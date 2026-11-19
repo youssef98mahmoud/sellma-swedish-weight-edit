@@ -1,0 +1,118 @@
+{
+  "corrected_accent": [
+    {
+      "language": "sv",
+      "context": "^barnet ser ett ",
+      "expected": "ä",
+      "baseline_prediction": "g",
+      "edited_prediction": "ä"
+    },
+    {
+      "language": "sv",
+      "context": "^fågeln s",
+      "expected": "ö",
+      "baseline_prediction": "k",
+      "edited_prediction": "ö"
+    },
+    {
+      "language": "sv",
+      "context": "^grannen hämtar ett grönt löv på ",
+      "expected": "ö",
+      "baseline_prediction": "g",
+      "edited_prediction": "ö"
+    },
+    {
+      "language": "sv",
+      "context": "^läraren s",
+      "expected": "ö",
+      "baseline_prediction": "k",
+      "edited_prediction": "ö"
+    },
+    {
+      "language": "sv",
+      "context": "^räven söker ett ",
+      "expected": "ä",
+      "baseline_prediction": "b",
+      "edited_prediction": "ä"
+    },
+    {
+      "language": "sv",
+      "context": "^flickan håller ett ",
+      "expected": "ä",
+      "baseline_prediction": "b",
+      "edited_prediction": "ä"
+    },
+    {
+      "language": "sv",
+      "context": "^vännen målar en s",
+      "expected": "å",
+      "baseline_prediction": "k",
+      "edited_prediction": "å"
+    },
+    {
+      "language": "sv",
+      "context": "^systern ",
+      "expected": "ö",
+      "baseline_prediction": "m",
+      "edited_prediction": "ö"
+    }
+  ],
+  "introduced_errors": [
+    {
+      "language": "sv",
+      "context": "^läraren vänder ett ",
+      "expected": "g",
+      "baseline_prediction": "g",
+      "edited_prediction": "ä"
+    },
+    {
+      "language": "sv",
+      "context": "^fågeln ",
+      "expected": "s",
+      "baseline_prediction": "s",
+      "edited_prediction": "ö"
+    },
+    {
+      "language": "sv",
+      "context": "^räven håller en s",
+      "expected": "k",
+      "baseline_prediction": "k",
+      "edited_prediction": "å"
+    },
+    {
+      "language": "sv",
+      "context": "^sjömannen gömmer ett ",
+      "expected": "g",
+      "baseline_prediction": "g",
+      "edited_prediction": "ä"
+    },
+    {
+      "language": "sv",
+      "context": "^barnet köper en s",
+      "expected": "k",
+      "baseline_prediction": "k",
+      "edited_prediction": "å"
+    },
+    {
+      "language": "sv",
+      "context": "^läraren söker ett ",
+      "expected": "b",
+      "baseline_prediction": "b",
+      "edited_prediction": "ä"
+    },
+    {
+      "language": "sv",
+      "context": "^målaren s",
+      "expected": "k",
+      "baseline_prediction": "k",
+      "edited_prediction": "ö"
+    },
+    {
+      "language": "sv",
+      "context": "^målaren sk",
+      "expected": "r",
+      "baseline_prediction": "r",
+      "edited_prediction": "å"
+    }
+  ]
+}

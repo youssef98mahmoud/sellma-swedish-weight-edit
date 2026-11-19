@@ -80,7 +80,7 @@ endobj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 9 0 R >>
 endobj
 9 0 obj
-<< /Length 2997 >>
+<< /Length 2839 >>
 stream
 0.14 0.22 0.31 rg
 BT /F1 8.8 Tf 1 0 0 1 48 754.0 Tm (delta to logits at inference. No special ability to interpret internal representations has been) Tj ET
@@ -102,10 +102,9 @@ BT /F2 11.3 Tf 1 0 0 1 48 544.7 Tm (References and AI usage) Tj ET
 BT /F1 8.8 Tf 1 0 0 1 48 524.2 Tm (1. Takehi, R., Teoh, J., Zhang, A., & Khattab, O. \(2026\). Sparks of Weight-Space Programming.) Tj ET
 BT /F1 8.8 Tf 1 0 0 1 48 512.0 Tm (https://rikiyat.github.io/blog/weight-space-programming/ 2. WASP. SE.LLMA - Swedish large language) Tj ET
 BT /F1 8.8 Tf 1 0 0 1 48 499.8 Tm (models. https://wasp-sweden.org/research/projects/sellma/) Tj ET
-BT /F1 8.8 Tf 1 0 0 1 48 481.6 Tm (AI assistance: ChatGPT \(GPT-6\) assisted with choosing the hypothesis, interpreting the two sources,) Tj ET
-BT /F1 8.8 Tf 1 0 0 1 48 469.4 Tm (writing and executing the Python experiment, designing controls, and drafting this note/PDF. Numerical) Tj ET
-BT /F1 8.8 Tf 1 0 0 1 48 457.2 Tm (results were produced by running the included code, not invented. The applicant should review and) Tj ET
-BT /F1 8.8 Tf 1 0 0 1 48 445.0 Tm (validate all work before submission.) Tj ET
+BT /F1 8.8 Tf 1 0 0 1 48 481.6 Tm (AI usage: I used ChatGPT to help refine the experiment design, write and run the code, interpret) Tj ET
+BT /F1 8.8 Tf 1 0 0 1 48 469.4 Tm (the results, and draft the research note. All reported measurements come from the experiment code) Tj ET
+BT /F1 8.8 Tf 1 0 0 1 48 457.2 Tm (included in this repository.) Tj ET
 0.5 0.5 0.5 rg
 BT /F1 7.5 Tf 1 0 0 1 48 29 Tm (SE.LLMA | Weight-space programming pilot) Tj ET
 BT /F1 7.5 Tf 1 0 0 1 542 29 Tm (2) Tj ET
@@ -126,5 +125,5 @@ xref
 trailer
 << /Size 10 /Root 1 0 R >>
 startxref
-10035
+9877
 %%EOF

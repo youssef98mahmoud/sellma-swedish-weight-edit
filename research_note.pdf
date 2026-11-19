@@ -1,0 +1,130 @@
+%PDF-1.4
+%ASCII report
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [6 0 R 8 0 R] /Count 2 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier /Encoding /WinAnsiEncoding >>
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 7 0 R >>
+endobj
+7 0 obj
+<< /Length 6215 >>
+stream
+0.14 0.22 0.31 rg
+BT /F2 16 Tf 1 0 0 1 48 754.0 Tm (Does a sparse weight edit improve Swedish character) Tj ET
+BT /F2 16 Tf 1 0 0 1 48 734.0 Tm (predictions?) Tj ET
+BT /F1 8.8 Tf 1 0 0 1 48 706.0 Tm (Candidate assignment | SE.LLMA | 19 November 2026) Tj ET
+BT /F2 11.3 Tf 1 0 0 1 48 687.8 Tm (Research question and hypothesis) Tj ET
+BT /F1 8.8 Tf 1 0 0 1 48 667.3 Tm (Can an interpretable, three-parameter output-bias edit improve Swedish-specific character predictions in) Tj ET
+BT /F1 8.8 Tf 1 0 0 1 48 655.1 Tm (a tiny bilingual character language model without large regressions? We hypothesized that increasing the) Tj ET
+BT /F1 8.8 Tf 1 0 0 1 48 642.9 Tm (output biases for \345, \344, and \366 would improve those predictions, but would be indistinguishable from a) Tj ET
+BT /F1 8.8 Tf 1 0 0 1 48 630.7 Tm (fixed inference-time logit bias. This is a deliberately narrow mechanistic test, not an experiment on a) Tj ET
+BT /F1 8.8 Tf 1 0 0 1 48 618.5 Tm (pretrained Swedish LLM.) Tj ET
+BT /F2 11.3 Tf 1 0 0 1 48 600.3 Tm (Critical reading of Weight-Space Programming) Tj ET
+BT /F1 8.8 Tf 1 0 0 1 48 579.8 Tm (Takehi et al. report successful direct reasoning over small networks \(including recognizing the training) Tj ET
+BT /F1 8.8 Tf 1 0 0 1 48 567.6 Tm (domain of small character models with input/output layers hidden\) and a substantial Qwen3.5-0.8B) Tj ET
+BT /F1 8.8 Tf 1 0 0 1 48 555.4 Tm (benchmark improvement after editing 0.016% of weights. Their strongest practical evidence is a) Tj ET
+BT /F1 8.8 Tf 1 0 0 1 48 543.2 Tm (model-specific intervention that suppresses reasoning loops, supported by the reported decrease in) Tj ET
+BT /F1 8.8 Tf 1 0 0 1 48 531.0 Tm (token-limit exhaustion. This does not establish that the model gained new mathematical knowledge.) Tj ET
+BT /F1 8.8 Tf 1 0 0 1 48 518.8 Tm (Crucially, some experiments use zero behavioral feedback, whereas the Qwen and Go studies allow up to 50) Tj ET
+BT /F1 8.8 Tf 1 0 0 1 48 506.6 Tm (forward-pass rounds: successful behavior-guided weight optimization is not the same as reading and) Tj ET
+BT /F1 8.8 Tf 1 0 0 1 48 494.4 Tm (editing weights from inspection alone. Direct comparisons to prompting, steering, and conventional) Tj ET
+BT /F1 8.8 Tf 1 0 0 1 48 482.2 Tm (fine-tuning are limited. Experiment 7 \(sycophancy\) also gives a useful failure case for raw-weight) Tj ET
+BT /F1 8.8 Tf 1 0 0 1 48 470.0 Tm (inspection.) Tj ET
+BT /F1 8.8 Tf 1 0 0 1 48 451.8 Tm (SE.LLMA aims to adapt open language models for accurate, culturally grounded Swedish and build) Tj ET
+BT /F1 8.8 Tf 1 0 0 1 48 439.6 Tm (Swedish-specific evaluations. A low-cost localized correction would be relevant, but only if it) Tj ET
+BT /F1 8.8 Tf 1 0 0 1 48 427.4 Tm (outperforms simpler controls and preserves other abilities.) Tj ET
+BT /F2 11.3 Tf 1 0 0 1 48 409.2 Tm (Experiment and controls) Tj ET
+BT /F1 8.8 Tf 1 0 0 1 48 388.7 Tm (A 24-dimensional character embedding, 48-unit single-layer GRU, and linear output were trained for five) Tj ET
+BT /F1 8.8 Tf 1 0 0 1 48 376.5 Tm (epochs from scratch on synthetic, author-written Swedish and English sentence templates \(800 Swedish and) Tj ET
+BT /F1 8.8 Tf 1 0 0 1 48 364.3 Tm (3,200 English training sentences\). Independent random combinations generated 240 sentences per language) Tj ET
+BT /F1 8.8 Tf 1 0 0 1 48 352.1 Tm (for validation and 400 per language for locked test evaluation. Templates and lexical items overlap) Tj ET
+BT /F1 8.8 Tf 1 0 0 1 48 339.9 Tm (across splits; our test only measures combinations of known elements. Seed: 20261119; PyTorch) Tj ET
+BT /F1 8.8 Tf 1 0 0 1 48 327.7 Tm (2.10.0+cpu.) Tj ET
+BT /F1 8.8 Tf 1 0 0 1 48 309.5 Tm (The edit adds +1.6 to the three output bias parameters for \345, \344, \366. The magnitude was chosen on) Tj ET
+BT /F1 8.8 Tf 1 0 0 1 48 297.3 Tm (validation only from a 0.0-2.5 grid, minimizing Swedish accented-target next-character NLL while) Tj ET
+BT /F1 8.8 Tf 1 0 0 1 48 285.1 Tm (limiting validation English overall NLL degradation to 0.03 nats and Swedish overall NLL degradation to) Tj ET
+BT /F1 8.8 Tf 1 0 0 1 48 272.9 Tm (0.02. Controls: unchanged model, 20 random three-character output-bias edits of the same amplitude, and) Tj ET
+BT /F1 8.8 Tf 1 0 0 1 48 260.7 Tm (a fixed inference-time logit offset. Test remained untouched during selection.) Tj ET
+BT /F2 11.3 Tf 1 0 0 1 48 242.5 Tm (Held-out results \(lower NLL is better\)) Tj ET
+BT /F3 7.9 Tf 1 0 0 1 48 222.0 Tm (Metric | Baseline | Targeted edit | Interpretation) Tj ET
+BT /F3 7.9 Tf 1 0 0 1 48 208.8 Tm (Swedish accented-target NLL | 0.580 | 0.313 | Better at \345/\344/\366 targets) Tj ET
+BT /F3 7.9 Tf 1 0 0 1 48 195.6 Tm (Swedish accented-target top-1 accuracy | 83.2% | 91.2% | +8.0 percentage points) Tj ET
+BT /F3 7.9 Tf 1 0 0 1 48 182.4 Tm (Swedish all-character NLL | 0.488 | 0.509 | Regression) Tj ET
+BT /F3 7.9 Tf 1 0 0 1 48 169.2 Tm (English all-character NLL | 0.316 | 0.324 | Small regression) Tj ET
+BT /F1 8.8 Tf 1 0 0 1 48 156.0 Tm (The 20 random edits had mean Swedish NLL 0.534 and English NLL 0.342; these random controls have) Tj ET
+BT /F1 8.8 Tf 1 0 0 1 48 143.8 Tm (different target characters and are not a matched comparator for accent-specific improvement. The edit) Tj ET
+BT /F1 8.8 Tf 1 0 0 1 48 131.6 Tm (changed model outputs: for the held-out prefix ^barnet ser ett , expected \344, baseline predicted g, and) Tj ET
+BT /F1 8.8 Tf 1 0 0 1 48 119.4 Tm (edited predicted \344. But it also introduced errors: for ^l\344raren v\344nder ett , expected g, baseline) Tj ET
+BT /F1 8.8 Tf 1 0 0 1 48 107.2 Tm (predicted g, and edited predicted \344. More examples are in examples.json.) Tj ET
+BT /F1 8.8 Tf 1 0 0 1 48 89.0 Tm (Key negative result: the edited model and a constant inference-time logit adjustment yield the same test) Tj ET
+BT /F1 8.8 Tf 1 0 0 1 48 76.8 Tm (metrics, and their raw logits differ by at most 4.8e-07 in the numerical equivalence check. This is) Tj ET
+BT /F1 8.8 Tf 1 0 0 1 48 64.6 Tm (expected algebraically: editing the final bias b to b + delta gives Wh + b + delta, identical to adding) Tj ET
+0.5 0.5 0.5 rg
+BT /F1 7.5 Tf 1 0 0 1 48 29 Tm (SE.LLMA | Weight-space programming pilot) Tj ET
+BT /F1 7.5 Tf 1 0 0 1 542 29 Tm (1) Tj ET
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 9 0 R >>
+endobj
+9 0 obj
+<< /Length 2997 >>
+stream
+0.14 0.22 0.31 rg
+BT /F1 8.8 Tf 1 0 0 1 48 754.0 Tm (delta to logits at inference. No special ability to interpret internal representations has been) Tj ET
+BT /F1 8.8 Tf 1 0 0 1 48 741.8 Tm (established.) Tj ET
+BT /F2 11.3 Tf 1 0 0 1 48 723.6 Tm (Interpretation, recommendation and limitations) Tj ET
+BT /F1 8.8 Tf 1 0 0 1 48 703.1 Tm (Recommendation: Do not prioritize this final-layer bias edit as a new weight-space technique for) Tj ET
+BT /F1 8.8 Tf 1 0 0 1 48 690.9 Tm (SE.LLMA. It is less flexible than inference steering, gives no advantage over the exactly equivalent) Tj ET
+BT /F1 8.8 Tf 1 0 0 1 48 678.7 Tm (alternative, and worsens overall Swedish NLL even while helping accented targets. The positive result is) Tj ET
+BT /F1 8.8 Tf 1 0 0 1 48 666.5 Tm (specific to a known output vocabulary. The experiment does not evaluate grammar, cultural understanding,) Tj ET
+BT /F1 8.8 Tf 1 0 0 1 48 654.3 Tm (open-ended generation, real Swedish corpora, or transfer to pretrained transformers. Only one model seed) Tj ET
+BT /F1 8.8 Tf 1 0 0 1 48 642.1 Tm (was trained, and examples are synthetic and template-overlapping. There is no statistical uncertainty) Tj ET
+BT /F1 8.8 Tf 1 0 0 1 48 629.9 Tm (estimate across model seeds.) Tj ET
+BT /F1 8.8 Tf 1 0 0 1 48 611.7 Tm (Next experiment: On a small open-weight Swedish-capable transformer, pre-register a concrete failure) Tj ET
+BT /F1 8.8 Tf 1 0 0 1 48 599.5 Tm (mode \(e.g., unwanted Swedish-to-English switching\), use naturally occurring held-out Swedish data,) Tj ET
+BT /F1 8.8 Tf 1 0 0 1 48 587.3 Tm (compare a hidden-layer edit with activation steering and matched prompting, and check Swedish task) Tj ET
+BT /F1 8.8 Tf 1 0 0 1 48 575.1 Tm (quality plus English regression across multiple seeds. This would distinguish nontrivial internal) Tj ET
+BT /F1 8.8 Tf 1 0 0 1 48 562.9 Tm (weight-space intervention from simple output calibration.) Tj ET
+BT /F2 11.3 Tf 1 0 0 1 48 544.7 Tm (References and AI usage) Tj ET
+BT /F1 8.8 Tf 1 0 0 1 48 524.2 Tm (1. Takehi, R., Teoh, J., Zhang, A., & Khattab, O. \(2026\). Sparks of Weight-Space Programming.) Tj ET
+BT /F1 8.8 Tf 1 0 0 1 48 512.0 Tm (https://rikiyat.github.io/blog/weight-space-programming/ 2. WASP. SE.LLMA - Swedish large language) Tj ET
+BT /F1 8.8 Tf 1 0 0 1 48 499.8 Tm (models. https://wasp-sweden.org/research/projects/sellma/) Tj ET
+BT /F1 8.8 Tf 1 0 0 1 48 481.6 Tm (AI assistance: ChatGPT \(GPT-6\) assisted with choosing the hypothesis, interpreting the two sources,) Tj ET
+BT /F1 8.8 Tf 1 0 0 1 48 469.4 Tm (writing and executing the Python experiment, designing controls, and drafting this note/PDF. Numerical) Tj ET
+BT /F1 8.8 Tf 1 0 0 1 48 457.2 Tm (results were produced by running the included code, not invented. The applicant should review and) Tj ET
+BT /F1 8.8 Tf 1 0 0 1 48 445.0 Tm (validate all work before submission.) Tj ET
+0.5 0.5 0.5 rg
+BT /F1 7.5 Tf 1 0 0 1 48 29 Tm (SE.LLMA | Weight-space programming pilot) Tj ET
+BT /F1 7.5 Tf 1 0 0 1 542 29 Tm (2) Tj ET
+endstream
+endobj
+xref
+0 10
+0000000000 65535 f 
+0000000023 00000 n 
+0000000072 00000 n 
+0000000135 00000 n 
+0000000232 00000 n 
+0000000334 00000 n 
+0000000429 00000 n 
+0000000575 00000 n 
+0000006841 00000 n 
+0000006987 00000 n 
+trailer
+<< /Size 10 /Root 1 0 R >>
+startxref
+10035
+%%EOF
